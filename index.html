@@ -12,18 +12,12 @@
     <!-- Assets -->
     <a-assets timeout="10000">
       <a-asset-item id="house" src="villa/scene.gltf"></a-asset-item>
-      <a-asset-item id="grass" src="floor/scene.gltf"></a-asset-item>
+      <img id="grassTexture" src="grass.jpg">
     </a-assets>
 
     <!-- Environment -->
     <a-sky src="Sky Background-56.jpg"></a-sky>
-    <!-- <a-plane src="grass.jpeg" rotation="-90 0 0" width="10000" height="10000" position="0 -1 0" repeat="100 100"></a-plane> -->
-     <a-entity 
-      gltf-model="#grass" 
-      position="0 -3 50" 
-      rotation="0 0 0"
-      scale="20 20 20"
-    ></a-entity>
+    <a-plane src="#grassTexture" rotation="-90 0 0" width="10000" height="10000" position="0 -3 0" repeat="2000 2000"></a-plane>
 
     <a-entity
     gltf-model="url(room/scene.gltf)"
@@ -46,8 +40,8 @@
 <!-- 
     <a-light type="ambient" color="#ffffff" intensity="1.5" position="-25 10 -2"></a-light> -->
     <!-- Lighting -->
-    <a-light type="ambient" color="#ffffff" intensity="1.5"></a-light>
-    <a-light type="directional" position="5 10 7" intensity="2"></a-light>
+    <a-light type="ambient" color="#cce6ff" intensity="0.6"></a-light>
+    <a-light type="directional" color="#ffffff" position="5 10 7" intensity="0.8" castShadow="true"></a-light>
 
     <!-- Camera -->
     <a-camera position="-8 5 30" look-controls wasd-controls></a-camera>
